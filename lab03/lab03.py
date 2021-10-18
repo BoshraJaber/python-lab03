@@ -24,15 +24,11 @@ def readingFromFile():
 
     arrayOfUserInput = re.findall('\{.*?\}',gameContent)
     answerFile = open('lab03/answer.txt','w+')
-    # answerFile.write(gameContent)
     answerContent = answerFile.read()
 
     for item in arrayOfUserInput:
         userInput= input( f"enter {item}")
        # item1= item.translate({ord('{'):None, ord('}'):None})
-      
-       # gameContent.format(userInput)
-        #print(22222222,gameContent.format(userInput))
         gameContent = gameContent.replace(item, userInput)
         print(11111,gameContent)
     answerFile.write(gameContent)
@@ -43,10 +39,6 @@ def readingFromFile():
 
 
 readingFromFile()
-# answerFile1 = open('lab03/answer.txt','w+')
-# answerContent1 = answerFile1.read()
-# print(answerContent1)
-
 
 
 
