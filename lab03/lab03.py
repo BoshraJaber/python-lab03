@@ -1,23 +1,5 @@
 import re # regex
 
-
-# https://stackoverflow.com/questions/11556810/count-matching-brackets-in-python-string
-
-
-def countBracket(string, c=0):
-    left_bracket = string.find("{")
-    if left_bracket > -1:
-        string = string[left_bracket + 1:]
-        right_bracket = string.find("}")
-        if right_bracket > -1:
-            if string[:right_bracket].find("{") == -1:
-                c += 1
-            string = string[right_bracket + 1:]
-        return countBracket(string, c)
-    else:
-        return c
-
-
 def readingFromFile():
     starterFile = open('lab03/game.txt','r+')
     gameContent = starterFile.read()
@@ -33,11 +15,6 @@ def readingFromFile():
         print(11111,gameContent)
     answerFile.write(gameContent)
     
-
-
-
-
-
 readingFromFile()
 
 
