@@ -6,7 +6,6 @@ def readingFromFile():
 
     arrayOfUserInput = re.findall('\{.*?\}',gameContent)
     answerFile = open('lab03/answer.txt','w+')
-    answerContent = answerFile.read()
 
     for item in arrayOfUserInput:
         userInput= input( f"enter {item}")
